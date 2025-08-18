@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function HeroSection() {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-800 overflow-hidden">
+      {/* Custom Cursor */}
+      <div
+        className="pointer-events-none fixed top-0 left-0 w-32 h-32 rounded-full 
+             bg-gradient-to-r from-[#00B4D8] via-[#48CAE4] to-[#90E0EF]
+             opacity-70 blur-2xl z-50"
+        style={{
+          transform: `translate(${position.x - 64}px, ${position.y - 64}px)`,
+        }}
+      ></div>
       {/* Background Kanan */}
       <div
         className="absolute inset-0 animate-gradient-up"
         style={{
-          background: "linear-gradient(to top, #002855, #003566)",
+          background: "linear-gradient(to top, #02173B, #012D70)",
           backgroundSize: "100% 200%",
           clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)",
           zIndex: 0,
@@ -18,7 +37,7 @@ function HeroSection() {
       <div
         className="absolute inset-0 animate-gradient-down"
         style={{
-          background: "linear-gradient(to bottom, #002855, #003566)",
+          background: "linear-gradient(to bottom, #02173B, #012D70)",
           backgroundSize: "100% 200%",
           clipPath: "polygon(0 0, 72% 0, 60% 100%, 0% 100%)",
           zIndex: 1,
