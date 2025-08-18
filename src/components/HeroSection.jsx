@@ -15,7 +15,7 @@ function HeroSection() {
     <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-800 overflow-hidden">
       {/* Custom Cursor */}
       <div
-        className="pointer-events-none fixed top-0 left-0 w-32 h-32 rounded-full 
+        className="pointer-events-none fixed top-0 left-0 w-34 h-34 rounded-full 
              bg-gradient-to-r from-[#00B4D8] via-[#48CAE4] to-[#90E0EF]
              opacity-70 blur-2xl z-50"
         style={{
