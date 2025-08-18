@@ -9,7 +9,7 @@ function Navigation() {
     <nav className="navbar fixed top-0 left-0 w-full pt-6 pb-4 px-6 z-50 bg-[#00000000]">
       <div className="flex justify-around items-center">
         {/* Logo */}
-        <div className="flex items-center gap-4 items-end">
+        <div className="flex gap-4 items-end">
           <img src={Logo} alt="main-logo" className="h-16 w-auto" />
           <h2 className="text-white font-semibold text-lg">
             PT BIKIN INOVASI TEKNOLOGI
