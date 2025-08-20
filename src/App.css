@@ -1,25 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
 .header-nav {
-  font-family: 'Tomorrow', sans-serif;
+  font-family: "Tomorrow", sans-serif;
 }
 
 .navigation {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
 }
 
 .active {
-  color: #F05A29 !important;
+  color: #f05a29 !important;
 }
 
 .left-heading {
-  font-family: 'Tomorrow', sans-serif;
+  font-family: "Tomorrow", sans-serif;
 }
 
 .right-heading {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .animate-gradient-up {
@@ -53,5 +52,37 @@
 }
 
 .card {
+  font-family: "Tomorrow", sans-serif;
+}
+
+.btn-text {
+  font-family: "Inter", sans-serif;
+}
+
+.text-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 85px;
+  bottom: 0;
+  width: 31%;
+  background: #0c3c8c;
+  clip-path: polygon(60% 0, 100% 0, 44% 100%, 0 100%);
+  z-index: 1;
+}
+
+.hand-image {
+  clip-path: polygon(0% 0, 100% 0, 70% 100%, 0 100%);
+}
+
+.text-img h1 {
+  font-family: "Tomorrow", sans-serif;
+}
+
+.text-img p {
+  font-family: "Inter", sans-serif;
+}
+
+.our-works {
   font-family: "Tomorrow", sans-serif;
 }

@@ -3,25 +3,25 @@ import React from 'react';
 export default function SolutionSection() {
     return (
         <section className='flex flex-col p-20'>
-            <h2 className="solution-heading text-center text-[48px] text-[#012D70]">Find the Your Best Solution</h2>
-            <div className="grid grid-rows-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="card bg-[#003C97] text-white p-8">
+            <h2 className="solution-heading text-center text-[48px] text-[#012D70] pb-10">Find the Your Best Solution</h2>
+            <div className="grid grid-rows-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="card bg-[#003C97] text-white px-10 py-12 text-left">
                     <h2 className='text-stone-400 text-[64px] h-20'>*</h2>
-                    <h5 className='text-[36px]'>Cloud Base Software</h5>
-                    <p>Cloud-based software with agility and scalability to accelerate operations and business decision-making.</p>
-                    <button className='p-4'>Learn More</button>
+                    <h5 className='text-[40px]'>Cloud Base Software</h5>
+                    <p className='w-75 text-[20px]'>Cloud-based software with agility and scalability to accelerate operations and business decision-making.</p>
+                    <button className='py-2 px-4 mt-8 text-[20px] outline-solid rounded-3xl btn-text hover:bg-white hover:text-black'>Learn More</button>
                 </div>
-                <div className="card bg-linear-to-t from-[#8A3418] to-[#F05A29] text-white p-8 hover:bg-[#003C97]">
+                <div className="card bg-linear-to-t from-[#8A3418] to-[#F05A29] text-white px-10 py-12 hover:bg-[#003C97] text-left">
                     <h2 className='text-stone-400 text-[64px] h-20'>*</h2>
-                    <h5>Cloud Base Software</h5>
-                    <p>Cloud-based software with agility and scalability to accelerate operations and business decision-making.</p>
-                    <button>Learn More</button>
+                    <h5 className='text-[40px]'>Support Software</h5>
+                    <p className='w-75 text-[20px]'>A modern solution and innovation focused on supporting benefits, funding, and business application development.</p>
+                    <button className='py-2 px-4 mt-8 text-[20px] outline-solid rounded-3xl btn-text'>Learn More</button>
                 </div>
-                <div className="card bg-[#003C97] text-white p-8">
+                <div className="card bg-[#003C97] text-white px-10 py-12 text-left">
                     <h2 className='text-stone-400 text-[64px] h-20'>*</h2>
-                    <h5>Cloud Base Software</h5>
-                    <p>Cloud-based software with agility and scalability to accelerate operations and business decision-making.</p>
-                    <button>Learn More</button>
+                    <h5 className='text-[40px]'>Professional Services</h5>
+                    <p className='w-75 text-[20px]'>A range of services and programs specifically designed to enhance the skills and capabilities of both business executors and decision-makers.</p>
+                    <button className='py-2 px-4 mt-8 text-[20px] outline-solid rounded-3xl btn-text'>Learn More</button>
                 </div>
             </div>
         </section>
