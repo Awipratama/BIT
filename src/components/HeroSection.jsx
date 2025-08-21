@@ -39,7 +39,7 @@ function HeroSection() {
       {active && (
         <div
           className="pointer-events-none absolute w-100 h-100 rounded-full 
-            bg-gradient-to-tr from-[#EA2F14] via-[#E6521F] to-[#FB9E3A]
+            bg-gradient-to-tr from-[#3674B5] via-[#578FCA] to-[#A1E3F9]
             opacity-70 blur-[140px] z-40"
           style={{
             left: `${position.x}px`,
