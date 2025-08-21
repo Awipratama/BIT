@@ -18,7 +18,7 @@ const insights = [
 export default function Insight() {
   return (
     <section className="bg-gradient-to-b from-blue-100 to-white py-16">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="px-32">
         {/* Title */}
         <h2 className="insight-header text-center text-[48px] font-regular text-blue-900 mb-10">
           Business Insight
@@ -35,7 +35,7 @@ export default function Insight() {
             {insights.map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-md overflow-hidden shadow-md"
+                className="bg-white rounded-xl overflow-hidden shadow-md"
               >
                 {/* Image */}
                 <img

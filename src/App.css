@@ -114,3 +114,13 @@
 .footer p {
   font-family: "Inter", sans-serif;
 }
+
+@media (max-width: 768px) {
+  .background-hero1 {
+    clip-path: polygon(100% 0px, 100% 0px, 100% 100%, 0% 100%) !important;
+  }
+
+  .background-hero2 {
+    clip-path: polygon(0px 0px, 100% 0px, 0% 100%, 0% 100%) !important;
+  }
+}

@@ -6,6 +6,8 @@ function HeroSection() {
   const heroRef = useRef(null);
 
   useEffect(() => {
+    if (window.innerWidth < 768) return;
+
     const hero = heroRef.current;
 
     if (!hero) return;
@@ -51,7 +53,7 @@ function HeroSection() {
 
       {/* Background Kanan */}
       <div
-        className="absolute inset-0 animate-gradient-up"
+        className="background-hero1 absolute inset-0 animate-gradient-up"
         style={{
           background: "linear-gradient(to top, #02173B, #012D70)",
           backgroundSize: "100% 200%",
@@ -62,7 +64,7 @@ function HeroSection() {
 
       {/* Background Kiri */}
       <div
-        className="absolute inset-0 animate-gradient-down"
+        className="background-hero2 absolute inset-0 animate-gradient-down"
         style={{
           background: "linear-gradient(to bottom, #02173B, #012D70)",
           backgroundSize: "100% 200%",
@@ -72,10 +74,10 @@ function HeroSection() {
       ></div>
 
       {/* Konten */}
-      <div className="relative z-10 flex h-screen">
+      <div className="relative z-10 flex flex-col md:flex-row h-screen items-center md:items-normal pt-100 md:pt-0">
         {/* Kiri */}
-        <div className="w-2/3 flex flex-col justify-end px-32 pb-20 text-white">
-          <h1 className="left-heading text-[56px] leading-tight z-50">
+        <div className="w-full md:w-2/3 flex flex-col justify-center md:justify-end px-4 md:px-32 pb-4 md:pb-20 text-white text-center md:text-left">
+          <h1 className="left-heading text-[28px] md:text-[56px] leading-tight z-50">
             We are a{" "}
             <span className="text-orange-500">technology company </span>that
             offers <br />a wide range of solutions <br /> for your digital needs
@@ -83,8 +85,8 @@ function HeroSection() {
         </div>
 
         {/* Kanan */}
-        <div className="flex-1 flex items-end px-16 pb-20 text-white">
-          <p className="right-heading max-w-md text-2xl">
+        <div className="w-full flex-1 flex items-start md:items-end px-4 md:px-16 pb-20 text-white text-center md:text-left">
+          <p className="right-heading max-w-md text-md md:text-2xl">
             from website development, CV-building platforms, to job search
             platforms. We are here to deliver the best with a strong focus on
             growth.

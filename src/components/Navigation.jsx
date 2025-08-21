@@ -22,12 +22,12 @@ function Navigation() {
   }, []);
 
   return (
-    <nav className={`navbar fixed top-0 left-0 w-full pt-6 pb-4 px-6 z-50 transition-all duration-300 ${scrolled ? "bg-[#00000000]" : "bg-[#012D70] shadow-md"}`}>
-      <div className="flex justify-around items-center">
+    <nav className={`navbar fixed top-0 left-0 w-full pt-6 pb-4 px-4 md:px-32 z-50 transition-all duration-300 ${scrolled ? "bg-[#00000000]" : "bg-[#012D70] shadow-md"}`}>
+      <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex gap-4 items-end py-2">
           <img src={Logo} alt="main-logo" className="h-16 w-auto" />
-          <h2 className="text-white font-semibold text-lg">
+          <h2 className="text-white font-semibold text-lg hidden md:block">
             PT BIKIN INOVASI TEKNOLOGI
           </h2>
         </div>
@@ -81,7 +81,7 @@ function Navigation() {
         </div>
 
         {/* Menu List */}
-        <ul className="flex flex-col gap-6 text-white font-bold p-6">
+        <ul className="flex flex-col gap-6 text-white font-bold p-6 text-sm">
           <li>
             <a href="#" className="hover:text-gray-300 transition" onClick={() => setIsOpen(false)}>
               About

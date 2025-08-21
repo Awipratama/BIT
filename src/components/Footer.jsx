@@ -6,7 +6,7 @@ import { FaWhatsapp, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/
 
 export default function Footer() {
   return (
-    <footer className="footer bg-[#02173B] text-white py-20 px-6 md:px-20">
+    <footer className="footer bg-[#02173B] text-white py-20 px-6 md:px-32">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
         {/* Left Section */}
         <div>

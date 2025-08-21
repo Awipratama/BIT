@@ -31,7 +31,7 @@ const works = [
 export default function OurWorks() {
   return (
     <section className="bg-blue-900 py-16 our-works">
-      <div className="max-w-6xl mx-auto">
+      <div className="px-32 w-full">
         {/* Title */}
         <h2 className="text-white text-[48px] font-normal text-center mb-12">
           Our Works
@@ -40,17 +40,16 @@ export default function OurWorks() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {works.map((work, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md flex flex-col items-center p-6 transition transform hover:scale-105"
-            >
-              {/* Logo (petunjuk: taruh logo kamu di /public/images/ dan sesuaikan src) */}
-              <img
-                src={work.img}
-                alt={work.name}
-                className="max-h-50 object-contain mb-4"
-              />
-              <p className="text-gray-800 font-medium text-sm">{work.name}</p>
+            <div key={index} className="bg-[#00000000]">
+              <div className="bg-white rounded-lg shadow-md flex flex-col items-center p-6 transition transform hover:scale-105">
+                {/* Logo (petunjuk: taruh logo kamu di /public/images/ dan sesuaikan src) */}
+                <img
+                  src={work.img}
+                  alt={work.name}
+                  className="max-h-50 object-contain mb-4"
+                />
+              </div>
+              <p className="text-white text-center font-regular text-xl pt-2">{work.name}</p>
             </div>
           ))}
         </div>
