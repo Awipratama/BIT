@@ -18,7 +18,7 @@ const insights = [
 export default function Insight() {
   return (
     <section className="bg-gradient-to-b from-blue-100 to-white py-16">
-      <div className="px-32">
+      <div className="px-4 md:px-32">
         {/* Title */}
         <h2 className="insight-header text-center text-[48px] font-regular text-blue-900 mb-10">
           Business Insight
@@ -26,7 +26,7 @@ export default function Insight() {
 
         <div className="flex items-center gap-4">
           {/* Left Arrow */}
-          <button className="p-3 rounded-full border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition">
+          <button className="p-3 hidden md:block rounded-full border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition">
             <FaArrowLeft size={20} />
           </button>
 
@@ -59,7 +59,7 @@ export default function Insight() {
           </div>
 
           {/* Right Arrow */}
-          <button className="p-3 rounded-full border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition">
+          <button className="p-3 hidden md:block rounded-full border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition">
             <FaArrowRight size={20} />
           </button>
         </div>

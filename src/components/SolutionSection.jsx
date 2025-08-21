@@ -5,19 +5,19 @@ export default function SolutionSection() {
         <section className='flex flex-col px-4 md:px-32 py-20'>
             <h2 className="solution-heading text-center text-[48px] text-[#012D70] pb-10">Find the Your Best Solution</h2>
             <div className="grid grid-rows-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="card bg-[#003C97] text-white px-10 py-12 text-left">
+                <div className="card transition duration-300 ease-out bg-[#003C97] hover:bg-linear-to-t hover:from-[#8A3418] hover:to-[#F05A29] text-white px-10 py-12 text-left">
                     <h2 className='text-stone-400 text-[64px] h-20'>*</h2>
                     <h5 className='text-[40px]'>Cloud Base Software</h5>
                     <p className='w-75 text-[20px]'>Cloud-based software with agility and scalability to accelerate operations and business decision-making.</p>
                     <button className='py-2 px-4 mt-8 text-[20px] outline-solid rounded-3xl btn-text hover:bg-white hover:text-black hover:outline-white'>Learn More</button>
                 </div>
-                <div className="card bg-linear-to-t from-[#8A3418] to-[#F05A29] text-white px-10 py-12 hover:bg-[#003C97] text-left">
+                <div className="card transition duration-300 ease-out bg-[#003C97] hover:bg-linear-to-t hover:from-[#8A3418] hover:to-[#F05A29] text-white px-10 py-12 hover:bg-[#003C97] text-left">
                     <h2 className='text-stone-400 text-[64px] h-20'>*</h2>
                     <h5 className='text-[40px]'>Support Software</h5>
                     <p className='w-75 text-[20px]'>A modern solution and innovation focused on supporting benefits, funding, and business application development.</p>
                     <button className='py-2 px-4 mt-8 text-[20px] outline-solid rounded-3xl btn-text hover:bg-white hover:text-black hover:outline-white'>Learn More</button>
                 </div>
-                <div className="card bg-[#003C97] text-white px-10 py-12 text-left">
+                <div className="card transition duration-300 ease-out bg-[#003C97] hover:bg-linear-to-t hover:from-[#8A3418] hover:to-[#F05A29] text-white px-10 py-12 text-left">
                     <h2 className='text-stone-400 text-[64px] h-20'>*</h2>
                     <h5 className='text-[40px]'>Professional Services</h5>
                     <p className='w-75 text-[20px]'>A range of services and programs specifically designed to enhance the skills and capabilities of both business executors and decision-makers.</p>

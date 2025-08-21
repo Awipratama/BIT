@@ -66,7 +66,7 @@ function Navigation() {
 
       {/* Offcanvas Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-[#012D70] shadow-lg transform ${
+        className={`fixed top-0 right-0 h-full w-80 bg-[#012D70] shadow-lg transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out md:hidden`}
       >
@@ -81,7 +81,7 @@ function Navigation() {
         </div>
 
         {/* Menu List */}
-        <ul className="flex flex-col gap-6 text-white font-bold p-6 text-sm">
+        <ul className="flex flex-col gap-6 text-white font-bold p-6 text-[24px]">
           <li>
             <a href="#" className="hover:text-gray-300 transition" onClick={() => setIsOpen(false)}>
               About

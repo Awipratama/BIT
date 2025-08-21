@@ -7,9 +7,9 @@ import { FaWhatsapp, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/
 export default function Footer() {
   return (
     <footer className="footer bg-[#02173B] text-white py-20 px-6 md:px-32">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 justify-items-start md:justify-items-center">
         {/* Left Section */}
-        <div>
+        <div className="order-3 md:order-1">
           <div className="flex items-center gap-2">
             <img src={Logo} alt="Logo" className="w-30" />
           </div>
@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
 
         {/* Middle Section */}
-        <div className="flex flex-col justify-end">
+        <div className="flex flex-col justify-end order-1 md:order-2">
           <h3 className="text-[#F05A29] text-[24px] font-semibold mb-3">BIKIN.ID</h3>
           <ul className="space-y-2 text-[20px]">
             <li>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center order-2 md:order-3">
           <h3 className="text-[#F05A29] text-[24px] font-semibold mb-3">OUR CONTACT</h3>
           <p className="text-[20px]">Jalan Sulatri 168x, Denpasar, Bali</p>
           <p className="text-[20px] mb-6">+62 8123-4567-890</p>

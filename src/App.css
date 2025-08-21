@@ -123,4 +123,15 @@
   .background-hero2 {
     clip-path: polygon(0px 0px, 100% 0px, 0% 100%, 0% 100%) !important;
   }
+
+  .text-img::before {
+    width: 100%;
+    right: 0;
+    margin-top: 25rem;
+    clip-path: polygon(100% 0%, 125% 0, 65% 100%, 35% 100%);
+  }
+
+  .hand-image {
+    clip-path: polygon(0% 0, 111% 0, 71% 100%, 0 100%);
+  }
 }

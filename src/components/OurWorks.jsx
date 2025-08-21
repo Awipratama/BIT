@@ -31,14 +31,14 @@ const works = [
 export default function OurWorks() {
   return (
     <section className="bg-blue-900 py-16 our-works">
-      <div className="px-32 w-full">
+      <div className="px-4 md:px-32 w-full">
         {/* Title */}
         <h2 className="text-white text-[48px] font-normal text-center mb-12">
           Our Works
         </h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
           {works.map((work, index) => (
             <div key={index} className="bg-[#00000000]">
               <div className="bg-white rounded-lg shadow-md flex flex-col items-center p-6 transition transform hover:scale-105">
@@ -49,7 +49,7 @@ export default function OurWorks() {
                   className="max-h-50 object-contain mb-4"
                 />
               </div>
-              <p className="text-white text-center font-regular text-xl pt-2">{work.name}</p>
+              <p className="text-white text-center font-regular text-sm md:text-xl pt-2">{work.name}</p>
             </div>
           ))}
         </div>
