@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
@@ -13,40 +13,92 @@ const insights = [
     desc: "Cloud-based software with agility and scalability to accelerate operations and business decision-making.",
     img: "/images/image 16.png",
   },
+  {
+    title: "Cloud based software",
+    desc: "Cloud-based software with agility and scalability to accelerate operations and business decision-making.",
+    img: "/images/image 16.png",
+  },
+  {
+    title: "Cloud based software",
+    desc: "Cloud-based software with agility and scalability to accelerate operations and business decision-making.",
+    img: "/images/image 16.png",
+  },
+  {
+    title: "Cloud based software",
+    desc: "Cloud-based software with agility and scalability to accelerate operations and business decision-making.",
+    img: "/images/image 16.png",
+  },
+  {
+    title: "Cloud based software",
+    desc: "Cloud-based software with agility and scalability to accelerate operations and business decision-making.",
+    img: "/images/image 16.png",
+  },
 ];
 
 export default function Insight() {
+  const [current, setCurrent] = useState(0);
+  const [itemsPerSlide, setItemsPerSlide] = useState(2);
+
+  // Cek ukuran layar
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setItemsPerSlide(1); // mobile
+      } else {
+        setItemsPerSlide(2); // desktop
+      }
+    };
+
+    handleResize(); // jalan pertama kali
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const totalSlides = Math.ceil(insights.length / itemsPerSlide);
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? totalSlides - 1 : current - 1);
+  };
+
+  const nextSlide = () => {
+    setCurrent(current === totalSlides - 1 ? 0 : current + 1);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [totalSlides]);
+
   return (
     <section className="bg-gradient-to-b from-blue-100 to-white py-16">
       <div className="px-4 md:px-32">
         {/* Title */}
-        <h2 className="insight-header text-center text-[48px] font-regular text-blue-900 mb-10">
+        <h2 className="insight-header text-center text-[32px] md:text-[48px] font-regular text-blue-900 mb-10">
           Business Insight
         </h2>
 
-        <div className="flex items-center gap-4">
-          {/* Left Arrow */}
-          <button className="p-3 hidden md:block rounded-full border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition">
-            <FaArrowLeft size={20} />
-          </button>
-
-          {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
+        {/* Mobile Slider (1 card per slide, auto + drag) */}
+        <div className="md:hidden overflow-hidden">
+          <div
+            className="flex transition-transform duration-500"
+            style={{ transform: `translateX(-${current * 100}%)` }}
+          >
             {insights.map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl overflow-hidden shadow-md"
+                className="min-w-full bg-white rounded-xl overflow-hidden shadow-md"
               >
-                {/* Image */}
                 <img
                   src={item.img}
                   alt={item.title}
                   className="w-full h-60 object-cover"
                 />
-
-                {/* Content */}
                 <div className="bg-[#898895] p-8">
-                  <h3 className="card-title text-4xl font-regular text-white mb-3">
+                  <h3 className="card-title text-2xl font-regular text-white mb-3">
                     {item.title}
                   </h3>
                   <p className="card-desc text-white mb-6">{item.desc}</p>
@@ -57,11 +109,82 @@ export default function Insight() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Desktop: 2 card per slide + arrow navigation */}
+        <div className="hidden md:flex items-center gap-4 relative">
+          {/* Left Arrow */}
+          <button
+            onClick={prevSlide}
+            className="p-3 rounded-full border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition"
+          >
+            <FaArrowLeft size={20} />
+          </button>
+
+          {/* Slider container */}
+          <div className="overflow-hidden flex-1">
+            <div
+              className="flex transition-transform duration-500"
+              style={{ transform: `translateX(-${current * 100}%)` }}
+            >
+              {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+                <div
+                  key={slideIndex}
+                  className="w-full flex-shrink-0 grid grid-cols-2 gap-6"
+                >
+                  {insights
+                    .slice(
+                      slideIndex * itemsPerSlide,
+                      slideIndex * itemsPerSlide + itemsPerSlide
+                    )
+                    .map((item, i) => (
+                      <div
+                        key={i}
+                        className="bg-white rounded-xl overflow-hidden shadow-md"
+                      >
+                        <img
+                          src={item.img}
+                          alt={item.title}
+                          className="w-full h-60 object-cover"
+                        />
+                        <div className="bg-[#898895] p-8">
+                          <h3 className="card-title text-3xl font-regular text-white mb-3">
+                            {item.title}
+                          </h3>
+                          <p className="card-desc text-white mb-6">
+                            {item.desc}
+                          </p>
+                          <button className="px-6 py-2 border border-white text-white rounded-full hover:bg-gray-700 hover:text-white transition">
+                            LEARN MORE
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Right Arrow */}
-          <button className="p-3 hidden md:block rounded-full border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition">
+          <button
+            onClick={nextSlide}
+            className="p-3 rounded-full border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition"
+          >
             <FaArrowRight size={20} />
           </button>
+        </div>
+
+        {/* Dots indicator (desktop) */}
+        <div className="hidden md:flex justify-center mt-6 gap-2">
+          {Array.from({ length: totalSlides }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-3 h-3 rounded-full ${
+                current === i ? "bg-blue-900" : "bg-gray-400"
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>
