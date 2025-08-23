@@ -35,18 +35,18 @@ function Navigation() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center">
           <ul className="flex gap-10 text-white text-[20px] font-bold">
-            <li>
-              <a href="#" className="active hover:text-gray-300 transition">
+            <li className="link-navbar">
+              <a href="#" className="active hover:text-orange-500 transition">
                 About
               </a>
             </li>
-            <li>
-              <a href="#" className="hover:text-gray-300 transition">
+            <li className="link-navbar">
+              <a href="#" className="hover:text-orange-500 transition">
                 Our Works
               </a>
             </li>
-            <li>
-              <a href="#" className="hover:text-gray-300 transition">
+            <li className="link-navbar">
+              <a href="#" className="hover:text-orange-500 transition">
                 Contact
               </a>
             </li>

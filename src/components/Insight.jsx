@@ -109,6 +109,31 @@ export default function Insight() {
               </div>
             ))}
           </div>
+          <div className="flex justify-center items-center gap-8 mt-4">
+            <button
+              onClick={prevSlide}
+              className="p-3 rounded-full border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition"
+            >
+              <FaArrowLeft size={20} />
+            </button>
+            <div className="md:hidden flex justify-center gap-2">
+              {Array.from({ length: totalSlides }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className={`w-3 h-3 rounded-full ${
+                    current === i ? "bg-blue-900" : "bg-gray-400"
+                  }`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={nextSlide}
+              className="p-3 rounded-full border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition"
+            >
+              <FaArrowRight size={20} />
+            </button>
+          </div>
         </div>
 
         {/* Desktop: 2 card per slide + arrow navigation */}

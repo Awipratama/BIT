@@ -40,9 +40,9 @@ function HeroSection() {
       {/* Custom Cursor hanya muncul di dalam hero */}
       {active && (
         <div
-          className="pointer-events-none absolute w-100 h-100 rounded-full 
+          className="pointer-events-none absolute w-200 h-200 rounded-full 
             bg-gradient-to-tr from-[#3674B5] via-[#578FCA] to-[#A1E3F9]
-            opacity-70 blur-[140px] z-40"
+            opacity-40 blur-[200px] z-40"
           style={{
             left: `${position.x}px`,
             top: `${position.y}px`,
@@ -80,7 +80,7 @@ function HeroSection() {
           <h1 className="left-heading text-[28px] md:text-[56px] leading-tight z-50">
             We are a{" "}
             <span className="text-orange-500">technology company </span>that
-            offers <br />a wide range of solutions <br /> for your digital needs
+            offers a wide range of solutions <br /> for your digital needs
           </h1>
         </div>
 
