@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server:
     {
-      host: 'bikin.id'
+      allowedHosts: ['bikin.id']
     }
 })
