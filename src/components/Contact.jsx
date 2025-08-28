@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-blue-100 to-white py-28">
+    <section className="bg-gradient-to-b from-blue-100 to-white py-40 h-screen">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14">
         {/* Judul */}
         <div className="mb-8">
