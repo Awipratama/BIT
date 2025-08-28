@@ -50,17 +50,17 @@ function Navigation() {
         <div className="hidden md:flex items-center">
           <ul className="flex gap-10 text-white text-[20px] font-bold">
             <li className="link-navbar">
-              <a href="#" className="active hover:text-orange-500 transition">
+              <a href="/#solution" className="active scroll-smooth hover:text-orange-500 transition">
                 About
               </a>
             </li>
             <li className="link-navbar">
-              <a href="#" className="hover:text-orange-500 transition">
+              <a href="/#ourworks" className="hover:text-orange-500 transition scroll-smooth">
                 Our Works
               </a>
             </li>
             <li className="link-navbar">
-              <a href="/contact" className="hover:text-orange-500 transition">
+              <a href="/contact" className="hover:text-orange-500 transition scroll-smooth">
                 Contact
               </a>
             </li>
@@ -98,7 +98,7 @@ function Navigation() {
         <ul className="flex flex-col gap-6 text-white font-bold p-6 text-[24px]">
           <li>
             <a
-              href="#"
+              href="/#solution"
               className="hover:text-gray-300 transition"
               onClick={() => setIsOpen(false)}
             >
@@ -107,7 +107,7 @@ function Navigation() {
           </li>
           <li>
             <a
-              href="#"
+              href="/#ourworks"
               className="hover:text-gray-300 transition"
               onClick={() => setIsOpen(false)}
             >

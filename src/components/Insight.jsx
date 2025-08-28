@@ -74,7 +74,7 @@ export default function Insight() {
   }, [totalSlides]);
 
   return (
-    <section className="bg-gradient-to-b from-blue-100 to-white py-16">
+    <section id="insight" className="bg-gradient-to-b from-blue-100 to-white py-16">
       <div className="px-4 md:px-32">
         {/* Title */}
         <h2 className="insight-header text-center text-[32px] md:text-[48px] font-regular text-blue-900 mb-10">

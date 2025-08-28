@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SolutionSection() {
     return (
-        <section className='flex flex-col px-4 md:px-32 py-20'>
+        <section id="solution" className='flex flex-col px-4 md:px-32 py-20'>
             <h2 className="solution-heading text-center text-[48px] text-[#012D70] pb-10">Find the Your Best Solution</h2>
             <div className="grid grid-rows-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <div className="card transition duration-300 ease-out bg-[#003C97] hover:bg-linear-to-t hover:from-[#8A3418] hover:to-[#F05A29] text-white px-10 py-12 text-left">

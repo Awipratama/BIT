@@ -1,6 +1,14 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom"
+
 export default function CTAContact() {
+  const navigate = useNavigate();
+
+  const handleButton = () => {
+    navigate('/contact');
+  }
+
   return (
     <section className="CTA relative py-20 px-4 md:px-0 flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-800 overflow-hidden">
       {/* Background Kanan */}
@@ -37,7 +45,7 @@ export default function CTAContact() {
           get a free consultation on how we can help your business and team
           grow.
         </p>
-        <button className="uppercase mt-8 px-4 py-2 text-[20px] border border-white bg-white text-[#012D70] rounded-full hover:bg-gray-700 hover:text-white transition">
+        <button onClick={handleButton} className="cursor-pointer uppercase mt-8 px-4 py-2 text-[20px] border border-white bg-white text-[#012D70] rounded-full hover:bg-gray-700 hover:text-white transition">
           Contact Us
         </button>
       </div>

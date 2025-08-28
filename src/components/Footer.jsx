@@ -26,22 +26,22 @@ export default function Footer() {
           <h3 className="text-[#F05A29] text-[24px] font-semibold mb-3">BIKIN.ID</h3>
           <ul className="space-y-2 text-[20px]">
             <li>
-              <a href="#" className="hover:text-[#F05A29]">
+              <a href="/" className="hover:text-[#F05A29]">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F05A29]">
+              <a href="/#solution" className="hover:text-[#F05A29]">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F05A29]">
+              <a href="/#ourworks" className="hover:text-[#F05A29]">
                 Our Works
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F05A29]">
+              <a href="/#insight" className="hover:text-[#F05A29]">
                 Business Insight
               </a>
             </li>
@@ -51,11 +51,15 @@ export default function Footer() {
         {/* Right Section */}
         <div className="flex flex-col justify-center order-2 md:order-3">
           <h3 className="text-[#F05A29] text-[24px] font-semibold mb-3">OUR CONTACT</h3>
-          <p className="text-[20px]">Jalan Sulatri 168x, Denpasar, Bali</p>
-          <p className="text-[20px] mb-6">+62 8123-4567-890</p>
+          <a href="https://maps.app.goo.gl/Rw8cMqUFq6tyWaT98" target="_blank">
+            <p className="text-[20px] hover:text-[#F05A29]">Jalan Sulatri 168x, Denpasar, Bali</p>
+          </a>
+          <a href="https://wa.me/081234567890" target="_blank">
+            <p className="text-[20px] hover:text-[#F05A29] mb-6">+62 8123-4567-890</p>
+          </a>
 
           <div className="flex gap-4 text-[30px]">
-            <a href="#" className="hover:text-[#F05A29]">
+            <a href="https://wa.me/081234567890" className="hover:text-[#F05A29]">
               <FaWhatsapp />
             </a>
             <a href="#" className="hover:text-[#F05A29]">
