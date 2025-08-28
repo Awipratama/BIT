@@ -1,0 +1,22 @@
+services:
+  bit-dev:
+    container_name: bit-dev
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      # - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "5173"]
+
+  bit-prod:
+    container_name: bit-prod
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.prod
+    ports:
+      - "80:80"
