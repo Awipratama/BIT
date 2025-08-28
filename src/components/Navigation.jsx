@@ -1,32 +1,46 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react"; // icon hamburger dan close
 import Logo from "../assets/Logo.png"; // ganti path sesuai punya kamu
+import { useLocation } from "react-router-dom";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScroll] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
+    if (location.pathname !== "/") {
+      setScroll(false);
+      return;
+    }
+
     const handleScroll = () => {
       if (window.scrollY < 50) {
         setScroll(true);
-      }
-      else {
+      } else {
         setScroll(false);
       }
-    }
+    };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [location.pathname]);
 
   return (
-    <nav className={`navbar fixed top-0 left-0 w-full pt-6 pb-4 px-4 md:px-32 z-50 transition-all duration-300 ${scrolled ? "bg-[#00000000]" : "bg-[#012D70] shadow-md"}`}>
+    <nav
+      className={`navbar fixed top-0 left-0 w-full pt-6 pb-4 px-4 md:px-32 z-50 transition-all duration-300 ${
+        scrolled ? "bg-[#00000000]" : "bg-[#012D70] shadow-md"
+      }`}
+    >
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex gap-4 items-end py-2">
-          <img src={Logo} alt="main-logo" className="h-16 w-auto" />
+          <a href="/">
+            <img src={Logo} alt="main-logo" className="h-16 w-auto" />
+          </a>
           <h2 className="text-white font-semibold text-lg hidden md:block">
             PT BIKIN INOVASI TEKNOLOGI
           </h2>
@@ -46,7 +60,7 @@ function Navigation() {
               </a>
             </li>
             <li className="link-navbar">
-              <a href="#" className="hover:text-orange-500 transition">
+              <a href="/contact" className="hover:text-orange-500 transition">
                 Contact
               </a>
             </li>
@@ -83,17 +97,29 @@ function Navigation() {
         {/* Menu List */}
         <ul className="flex flex-col gap-6 text-white font-bold p-6 text-[24px]">
           <li>
-            <a href="#" className="hover:text-gray-300 transition" onClick={() => setIsOpen(false)}>
+            <a
+              href="#"
+              className="hover:text-gray-300 transition"
+              onClick={() => setIsOpen(false)}
+            >
               About
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-gray-300 transition" onClick={() => setIsOpen(false)}>
+            <a
+              href="#"
+              className="hover:text-gray-300 transition"
+              onClick={() => setIsOpen(false)}
+            >
               Our Works
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-gray-300 transition" onClick={() => setIsOpen(false)}>
+            <a
+              href="/contact"
+              className="hover:text-gray-300 transition"
+              onClick={() => setIsOpen(false)}
+            >
               Contact
             </a>
           </li>
