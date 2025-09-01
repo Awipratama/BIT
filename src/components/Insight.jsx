@@ -74,7 +74,7 @@ export default function Insight() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-    }, 5000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [totalSlides]);
@@ -87,7 +87,8 @@ export default function Insight() {
 
   const handleMouseMove = (e) => {
     if (!isDragging) return;
-    const x = e.pageX;
+    e.preventDefault();
+    const x = e.pageX - sliderRef.current.offsetLeft;
     const diff = startX - x;
     if (Math.abs(diff) > 50) {
       if (diff > 0) {
@@ -105,6 +106,7 @@ export default function Insight() {
   // Touch support (mobile)
   const handleTouchStart = (e) => {
     setIsDragging(true);
+    e.preventDefault();
     setStartX(e.touches[0].pageX);
     setScrollX(current);
   };
@@ -210,10 +212,18 @@ export default function Insight() {
           </button>
 
           {/* Slider container */}
-          <div className="overflow-hidden flex-1">
+          <div className="overflow-hidden flex-1 cursor-grab active:cursor-grabbing">
             <div
+              ref={sliderRef}
               className="flex transition-transform duration-500"
               style={{ transform: `translateX(-${current * 100}%)` }}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseLeave}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
               {Array.from({ length: totalSlides }).map((_, slideIndex) => (
                 <div
@@ -233,6 +243,8 @@ export default function Insight() {
                         <img
                           src={item.img}
                           alt={item.title}
+                          draggable="false"
+                          onDragStart={(e) => e.preventDefault()}
                           className="w-full h-60 object-cover"
                         />
                         <div className="bg-[#898895] p-8">
