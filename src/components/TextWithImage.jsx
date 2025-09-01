@@ -3,7 +3,7 @@ import HandImage from "../assets/image13.png"
 
 export default function TextWithImage() {
   return (
-    <section className="text-img bg-linear-to-t from-[#ffffff] to-[#99B9EB] px-4 py-10 md:px-32 md:py-32 relative">
+    <section className="text-img bg-linear-to-t from-[#ffffff] to-[#99B9EB] px-4 py-10 md:px-32 md:py-32 relative overflow-hidden">
       <div className="flex flex-col md:flex-row justify-center items-center gap-18">
           {/* <!-- Text --> */}
           <div className="hero-text w-full">
