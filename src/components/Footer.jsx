@@ -23,8 +23,8 @@ export default function Footer() {
 
         {/* Middle Section */}
         <div className="flex flex-col justify-end order-1 md:order-2">
-          <h3 className="text-[#F05A29] text-[24px] font-regular mb-3">BIKIN.ID</h3>
-          <ul className="space-y-2 text-[20px]">
+          <h3 className="text-[#F05A29] text-[20px] md:text-[24px] font-regular mb-3">BIKIN.ID</h3>
+          <ul className="space-y-2 text-[16px] md:text-[20px]">
             <li>
               <a href="/" className="hover:text-[#F05A29]">
                 Home
@@ -50,12 +50,12 @@ export default function Footer() {
 
         {/* Right Section */}
         <div className="flex flex-col justify-center order-2 md:order-3">
-          <h3 className="text-[#F05A29] text-[24px] font-regular mb-3">OUR CONTACT</h3>
+          <h3 className="text-[#F05A29] text-[20px] md:text-[24px] font-regular mb-3">OUR CONTACT</h3>
           <a href="https://maps.app.goo.gl/Rw8cMqUFq6tyWaT98" target="_blank">
-            <p className="text-[20px] hover:text-[#F05A29]">Jalan Sulatri 168x, Denpasar, Bali</p>
+            <p className="text-[16px] md:text-[20px] hover:text-[#F05A29] pb-4">Jalan Sulatri 168x, Denpasar, Bali</p>
           </a>
           <a href="https://wa.me/087887990222" target="_blank">
-            <p className="text-[20px] hover:text-[#F05A29] mb-6">+62 878-8799-0222</p>
+            <p className="text-[16px] md:text-[20px] hover:text-[#F05A29] mb-6">+62 878-8799-0222</p>
           </a>
 
           <div className="flex gap-4 text-[30px]">
