@@ -139,6 +139,10 @@
   opacity: 1;
 }
 
+.service-list {
+  font-family: "Tomorrow", sans-serif;
+}
+
 @media (max-width: 768px) {
   .background-hero1 {
     clip-path: polygon(100% 0px, 100% 0px, 100% 100%, 0% 100%) !important;
