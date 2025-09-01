@@ -35,7 +35,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-800 overflow-hidden">
+    <section ref={heroRef} className="relative h-160 md:h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-800 overflow-hidden">
 
       {/* Custom Cursor hanya muncul di dalam hero */}
       {active && (
@@ -74,7 +74,7 @@ function HeroSection() {
       ></div>
 
       {/* Konten */}
-      <div className="relative z-10 flex flex-col md:flex-row h-screen items-center md:items-end pt-100 md:pt-0">
+      <div className="relative z-10 flex flex-col md:flex-row h-screen items-center md:items-end pt-80 md:pt-0">
         {/* Kiri */}
         <div className="w-full md:w-2/3 flex flex-col justify-center md:justify-end px-4 md:px-32 pb-4 md:pb-20 text-white text-center md:text-left">
           <h1 className="left-heading text-[28px] md:text-[56px] leading-tight z-50">
@@ -85,7 +85,7 @@ function HeroSection() {
         </div>
 
         {/* Kanan */}
-        <div className="w-full flex-1 flex items-start md:items-end px-4 md:px-0 pr-0 md:pr-32 pb-20 text-white text-center md:text-left">
+        <div className="w-full flex-1 flex items-start md:items-end px-4 md:px-0 md:pr-32 pb-20 text-white text-center md:text-left">
           <p className="right-heading max-w-md text-md md:text-2xl">
             from website development, CV-building platforms, to job search
             platforms. We are here to deliver the best with a strong focus on

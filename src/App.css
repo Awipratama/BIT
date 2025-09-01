@@ -151,8 +151,9 @@
   .text-img::before {
     width: 100%;
     right: 0;
-    margin-top: 25rem;
-    clip-path: polygon(100% 0%, 120% 0, 65% 100%, 40% 100%);
+    margin-right: -3rem;
+    margin-top: 20rem;
+    clip-path: polygon(90% 0%, 106% 0, 53% 100%, 30% 100%);
   }
 
   .hand-image {

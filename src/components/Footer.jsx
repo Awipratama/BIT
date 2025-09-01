@@ -14,8 +14,8 @@ export default function Footer() {
             <img src={Logo} alt="Logo" className="w-30" />
           </div>
           <div className="flex flex-col justify-between gap-16">
-              <h3 className="mt-2 text-[24px] font-medium">PT BIKIN INOVASI TEKNOLOGI</h3>
-              <p className="mt-6 text-[20px] text-gray-400">
+              <h3 className="mt-2 text-[20px] md:text-[24px] font-medium">PT BIKIN INOVASI TEKNOLOGI</h3>
+              <p className="mt-6 text-[16px] md:text-[20px] text-gray-400">
                 Copyright ©2025. All right reserved.
               </p>
           </div>
@@ -54,12 +54,12 @@ export default function Footer() {
           <a href="https://maps.app.goo.gl/Rw8cMqUFq6tyWaT98" target="_blank">
             <p className="text-[20px] hover:text-[#F05A29]">Jalan Sulatri 168x, Denpasar, Bali</p>
           </a>
-          <a href="https://wa.me/081234567890" target="_blank">
-            <p className="text-[20px] hover:text-[#F05A29] mb-6">+62 8123-4567-890</p>
+          <a href="https://wa.me/087887990222" target="_blank">
+            <p className="text-[20px] hover:text-[#F05A29] mb-6">+62 878-8799-0222</p>
           </a>
 
           <div className="flex gap-4 text-[30px]">
-            <a href="https://wa.me/081234567890" className="hover:text-[#F05A29]">
+            <a href="https://wa.me/087887990222" className="hover:text-[#F05A29]">
               <FaWhatsapp />
             </a>
             <a href="#" className="hover:text-[#F05A29]">

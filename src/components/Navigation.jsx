@@ -39,7 +39,7 @@ function Navigation() {
         {/* Logo */}
         <div className="flex gap-4 items-end py-2">
           <a href="/">
-            <img src={Logo} alt="main-logo" className="h-16 w-auto" />
+            <img src={Logo} alt="main-logo" className="h-8 w-auto" />
           </a>
           <h2 className="text-white font-semibold text-lg hidden md:block">
             PT BIKIN INOVASI TEKNOLOGI
