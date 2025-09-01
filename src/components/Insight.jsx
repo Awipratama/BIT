@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
@@ -39,6 +39,12 @@ export default function Insight() {
   const [current, setCurrent] = useState(0);
   const [itemsPerSlide, setItemsPerSlide] = useState(2);
 
+  // drag state
+  const sliderRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [, setScrollX] = useState(0);
+
   // Cek ukuran layar
   useEffect(() => {
     const handleResize = () => {
@@ -73,8 +79,57 @@ export default function Insight() {
     return () => clearInterval(interval);
   }, [totalSlides]);
 
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX);
+    setScrollX(current);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    const x = e.pageX;
+    const diff = startX - x;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+      setIsDragging(false);
+    }
+  };
+
+  const handleMouseUp = () => setIsDragging(false);
+  const handleMouseLeave = () => setIsDragging(false);
+
+  // Touch support (mobile)
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX);
+    setScrollX(current);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    const x = e.touches[0].pageX;
+    const diff = startX - x;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+      setIsDragging(false);
+    }
+  };
+
+  const handleTouchEnd = () => setIsDragging(false);
+
   return (
-    <section id="insight" className="bg-gradient-to-b from-blue-100 to-white py-16">
+    <section
+      id="insight"
+      className="bg-gradient-to-b from-blue-100 to-white py-16"
+    >
       <div className="px-4 md:px-32">
         {/* Title */}
         <h2 className="insight-header text-center text-[28px] md:text-[48px] font-regular text-blue-900 mb-10">
@@ -84,8 +139,16 @@ export default function Insight() {
         {/* Mobile Slider (1 card per slide, auto + drag) */}
         <div className="md:hidden overflow-hidden">
           <div
+            ref={sliderRef}
             className="flex transition-transform duration-500"
             style={{ transform: `translateX(-${current * 100}%)` }}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             {insights.map((item, i) => (
               <div
