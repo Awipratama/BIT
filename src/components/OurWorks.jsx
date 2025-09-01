@@ -51,7 +51,7 @@ export default function OurWorks() {
                   <img
                     src={work.img}
                     alt={work.name}
-                    className="max-h-50 object-contain mb-4"
+                    className="max-h-50 object-contain mb-0 md:mb-4"
                   />
                 </div>
                 <p className="text-white text-center font-regular text-sm md:text-xl pt-2 hover:underline cursor-pointer">{work.name}</p>
