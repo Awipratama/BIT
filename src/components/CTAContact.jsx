@@ -1,12 +1,9 @@
 import React from "react";
 
-import { useNavigate } from "react-router-dom"
-
 export default function CTAContact() {
-  const navigate = useNavigate();
 
   const handleButton = () => {
-    navigate('/contact');
+    window.location.href = "https://wa.me/087887990222";
   }
 
   return (
