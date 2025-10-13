@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
 
         {/* Middle Section */}
-        <div className="flex flex-col justify-end order-1 md:order-2">
+        <div className="flex flex-col justify-start order-1 md:order-2">
           <h3 className="text-[#F05A29] text-[20px] md:text-[24px] font-regular mb-3">BIKIN.ID</h3>
           <ul className="space-y-2 text-[16px] md:text-[20px]">
             <li>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-col justify-center order-2 md:order-3">
+        <div className="flex flex-col justify-start order-2 md:order-3">
           <h3 className="text-[#F05A29] text-[20px] md:text-[24px] font-regular mb-3">OUR CONTACT</h3>
           <a href="https://maps.app.goo.gl/Rw8cMqUFq6tyWaT98" target="_blank">
             <p className="text-[16px] md:text-[20px] hover:text-[#F05A29] pb-4 hover:underline">Jalan Sulatri 168x, Denpasar, Bali</p>
@@ -59,18 +59,18 @@ export default function Footer() {
           </a>
 
           <div className="flex gap-4 text-[30px]">
-            <a href="https://wa.me/087887990222" className="hover:text-[#F05A29]">
+            <a href="https://wa.me/087887990222" target="_blank" className="hover:text-[#F05A29]">
               <FaWhatsapp />
             </a>
-            <a href="#" className="hover:text-[#F05A29]">
+            <a href="https://www.instagram.com/awbalidigital?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="hover:text-[#F05A29]">
               <FaInstagram />
             </a>
-            <a href="#" className="hover:text-[#F05A29]">
+            {/* <a href="#" className="hover:text-[#F05A29]">
               <FaFacebookF />
             </a>
             <a href="#" className="hover:text-[#F05A29]">
               <FaLinkedinIn />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

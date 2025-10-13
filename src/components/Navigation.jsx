@@ -95,7 +95,7 @@ function Navigation() {
         </div>
 
         {/* Menu List */}
-        <ul className="flex flex-col gap-6 text-white font-bold p-6 text-[24px]">
+        <ul className="flex flex-col gap-6 text-white font-bold p-10 text-[24px]">
           <li>
             <a
               href="/#solution"

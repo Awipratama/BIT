@@ -4,28 +4,28 @@ import img1 from "../assets/image1.png";
 import img2 from "../assets/image2.png";
 import img3 from "../assets/image3.png";
 import img4 from "../assets/image4.png";
-import img5 from "../assets/image5.png";
+// import img5 from "../assets/image5.png";
 import img6 from "../assets/image6.png";
 import img7 from "../assets/image7.png";
 import img8 from "../assets/image8.png";
-import img9 from "../assets/image9.png";
-import img10 from "../assets/image10.png";
-import img11 from "../assets/image11.png";
+// import img9 from "../assets/image9.png";
+// import img10 from "../assets/image10.png";
+// import img11 from "../assets/image11.png";
 import img12 from "../assets/image12.png";
 
 const works = [
+  { name: "AWBaliDigital.com", img: img7, link: "https://www.awbalidigital.com/" },
   { name: "BikinCV.com", img: img1, link: "https://www.bikincv.com/" },
   { name: "LokerBali.info", img: img2, link: "https://www.lokerbali.info/" },
   { name: "LokerJakarta.id", img: img3, link: "https://www.lokerjakarta.id/" },
   { name: "Cari-Kos.com", img: img4, link: "https://www.cari-kos.com/" },
-  { name: "Reseppedia.com", img: img5, link: "https://www.reseppedia.com/" },
-  { name: "Kooliner.com", img: img6, link: "https://www.kooliner.com/" },
-  { name: "AWBaliDigital.com", img: img7, link: "https://www.awbalidigital.com/" },
-  { name: "LowonganHotelBali.com", img: img8, link: "https://www.lowonganhotelbali.com/" },
-  { name: "Weddingku.id", img: img9, link: "https://www.weddingku.id/" },
-  { name: "Cvresume.co", img: img10, link: "https://www.cvresume.co/" },
-  { name: "Jktliving.com", img: img11, link: "https://www.jktliving.com/" },
   { name: "Balifast.com", img: img12, link: "https://www.balifast.com/" },
+  { name: "LowonganHotelBali.com", img: img8, link: "https://www.lowonganhotelbali.com/" },
+  { name: "Kooliner.com", img: img6, link: "https://www.kooliner.com/" },
+  // { name: "Reseppedia.com", img: img5, link: "https://www.reseppedia.com/" },
+  // { name: "Weddingku.id", img: img9, link: "https://www.weddingku.id/" },
+  // { name: "Cvresume.co", img: img10, link: "https://www.cvresume.co/" },
+  // { name: "Jktliving.com", img: img11, link: "https://www.jktliving.com/" },
 ];
 
 export default function OurWorks() {

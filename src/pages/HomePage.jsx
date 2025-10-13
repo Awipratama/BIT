@@ -17,7 +17,7 @@ function HomePage() {
       <Solution />
       <TextWithImage />
       <OurWorks />
-      <Insight />
+      {/* <Insight /> */}
       <CTA />
       <Footer />
     </>
