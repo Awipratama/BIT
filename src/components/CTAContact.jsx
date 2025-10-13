@@ -3,7 +3,7 @@ import React from "react";
 export default function CTAContact() {
 
   const handleButton = () => {
-    window.location.href = "https://wa.me/087887990222";
+    window.location.href = "/contact";
   }
 
   return (

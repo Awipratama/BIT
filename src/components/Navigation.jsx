@@ -60,7 +60,7 @@ function Navigation() {
               </a>
             </li>
             <li className="link-navbar">
-              <a href="https://wa.me/087887990222" className="hover:text-orange-500 transition scroll-smooth">
+              <a href="/contact" className="hover:text-orange-500 transition scroll-smooth">
                 Contact
               </a>
             </li>

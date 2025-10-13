@@ -107,7 +107,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="bg-[#012D70] hover:bg-blue-900 text-white font-semibold py-3 rounded-lg transition"
+              className="bg-[#012D70] hover:bg-blue-900 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
             >
               Send Message
             </button>

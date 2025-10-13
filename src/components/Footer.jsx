@@ -40,11 +40,11 @@ export default function Footer() {
                 Our Works
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/#insight" className="hover:text-[#F05A29]">
                 Business Insight
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 
