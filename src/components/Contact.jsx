@@ -39,10 +39,6 @@ export default function Contact() {
         {/* Judul */}
         <div className="mb-8">
           <h2 className="text-4xl font-bold text-[#012D70]">Contact Us</h2>
-          {/* <p className="mt-4 text-gray-600 max-w-2xl">
-            Have questions or want to work with us? Fill the form below or find
-            us on the map.
-          </p> */}
         </div>
 
         {/* Grid utama */}
