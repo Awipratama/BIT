@@ -60,7 +60,7 @@ function Navigation() {
               </a>
             </li>
             <li className="link-navbar">
-              <a href="/contact" className="hover:text-orange-500 transition scroll-smooth">
+              <a href="/#contact" className="hover:text-orange-500 transition scroll-smooth">
                 Contact
               </a>
             </li>
@@ -116,7 +116,7 @@ function Navigation() {
           </li>
           <li>
             <a
-              href="/contact"
+              href="/#contact"
               className="hover:text-gray-300 transition"
               onClick={() => setIsOpen(false)}
             >

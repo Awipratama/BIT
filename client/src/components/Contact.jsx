@@ -47,7 +47,7 @@ export default function Contact() {
 
   return (
     <section className="bg-gradient-to-b from-blue-100 to-white py-10">
-      <div className="max-w-7xl mx-auto px-6 pb-0 md:pb-10 lg:px-12 pt-40 h-full">
+      <div className="max-w-7xl mx-auto px-6 pb-0 md:pb-10 lg:px-12 pt-10 h-full">
         {/* Judul */}
         <div className="mb-8">
           <h2 className="text-4xl font-bold text-[#012D70]">Contact Us</h2>
