@@ -1,14 +1,18 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
-require("dotenv").config();
+require("dotenv").config({ path: __dirname + "/.env" });
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.post("/send", async (req, res) => {
-  const { name, email, message } = req.body;
+app.post("/api/send", async (req, res) => {
+  const { name, email, subject, message } = req.body;
+
+  if (!email || !message) {
+    return res.status(400).json({ success: false, message: "Missing fields" });
+  }
 
   const transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
@@ -21,10 +25,16 @@ app.post("/send", async (req, res) => {
   });
 
   const mailOptions = {
-    from: email,
+    from: `"${name}" <${process.env.MAIL_USER}>`,
     to: "awipratama05122006@gmail.com",
     subject: `Message from ${name}`,
-    text: message,
+    text: `You received a new message from the contact form:
+
+    Name: ${name}
+    Email: ${email}
+    Subject: ${subject}
+    Message: ${message}
+    `,
   };
 
   try {

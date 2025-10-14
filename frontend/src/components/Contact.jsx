@@ -11,7 +11,7 @@ export default function Contact() {
   });
   const [captchaInput, setCaptchaInput] = useState("");
   const [error, setError] = useState("");
-  const API_URL = import.meta.env.VITE_API_URL || "/api";
+  const API_URL = "https://bikin.id/api/send";
 
   useEffect(() => {
     generateCaptcha();
@@ -28,21 +28,35 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch(API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
 
+    // ✅ Cek captcha dulu sebelum kirim
     if (parseInt(captchaInput) !== num1 + num2) {
       setError("Captcha salah, coba lagi.");
       generateCaptcha();
       return;
     }
 
-    // kalau captcha benar
-    alert("Form berhasil dikirim ✅");
-    // TODO: tambahkan logic kirim data form ke backend
+    try {
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert("✅ Email berhasil dikirim!");
+        setForm({ name: "", email: "", subject: "", message: "" });
+        generateCaptcha();
+        return;
+      } else {
+        alert("❌ Gagal mengirim email: " + data.message);
+      }
+    } catch (err) {
+      console.error(err);
+      alert("❌ Terjadi kesalahan saat mengirim email");
+    }
   };
 
   return (
@@ -60,6 +74,7 @@ export default function Contact() {
             <div>
               <input
                 type="text"
+                value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className="w-full border-b border-gray-300  px-4 py-2 focus:outline-none focus:border-gray-500"
                 placeholder="* Your Name"
@@ -69,6 +84,7 @@ export default function Contact() {
             <div>
               <input
                 type="email"
+                value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="w-full border-b border-gray-300  px-4 py-2 focus:outline-none focus:border-gray-500"
                 placeholder="* Your Email"
@@ -78,6 +94,7 @@ export default function Contact() {
             <div>
               <input
                 type="text"
+                value={form.subject}
                 onChange={(e) => setForm({ ...form, subject: e.target.value })}
                 className="w-full border-b border-gray-300  px-4 py-2 focus:outline-none focus:border-gray-500"
                 placeholder="* Subject"
@@ -87,6 +104,7 @@ export default function Contact() {
             <div>
               <textarea
                 rows="4"
+                value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 placeholder="* Write your message..."
               ></textarea>
