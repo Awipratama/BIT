@@ -132,7 +132,7 @@ export default function Contact() {
                 <button
                   type="button"
                   onClick={generateCaptcha}
-                  className="text-sm text-blue-600 hover:underline cursor-pointer"
+                  className="text-sm  text-blue-600 hover:underline cursor-pointer"
                 >
                   Refresh
                 </button>
@@ -140,12 +140,14 @@ export default function Contact() {
               {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
             </div>
 
-            <button
-              type="submit"
-              className="bg-[#012D70] hover:bg-blue-900 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
-            >
-              Send Message
-            </button>
+            <div className="submit-btn w-full flex justify-end">
+              <button
+                type="submit"
+                className="bg-[#012D70] w-[40%] hover:bg-blue-900 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
+              >
+                Send Message
+              </button>
+            </div>
           </form>
 
           {/* Google Maps */}
