@@ -1,30 +1,7 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
-const { MailtrapTransport } = require("nodemailer-mailtrap-transport");
-const TOKEN = "25bc0680cb4101f900644fd4744634f0";
-
-const transport = nodemailer.createTransport(
-  MailtrapTransport({
-    token: TOKEN,
-  })
-);
-
-const sender = {
-  address: "hello@demomailtrap.co",
-  name: "Mailtrap Test",
-};
-const recipients = ["awipratama05122006@gmail.com"];
-
-transport
-  .sendMail({
-    from: sender,
-    to: recipients,
-    subject: "You are awesome!",
-    text: "Congrats for sending test email with Mailtrap!",
-    category: "Integration Test",
-  })
-  .then(console.log, console.error);
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
@@ -45,7 +22,7 @@ app.post("/send", async (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: process.env.MAIL_USER,
+    to: "awipratama05122006@gmail.com",
     subject: `Message from ${name}`,
     text: message,
   };
@@ -57,7 +34,7 @@ app.post("/send", async (req, res) => {
       .json({ success: true, message: "Email sent successfully!" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ success: false, message: "Failed to send email." });
+    res.status(500).json({ success: false, message: error.message });
   }
 });
 
