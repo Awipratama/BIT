@@ -11,7 +11,7 @@ export default function Contact() {
   });
   const [captchaInput, setCaptchaInput] = useState("");
   const [error, setError] = useState("");
-  const API_URL = "https://bikin.id/api/send";
+  const API_URL = "https://bikin.id/api/send/mail";
 
   useEffect(() => {
     generateCaptcha();
