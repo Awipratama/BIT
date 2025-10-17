@@ -31,7 +31,7 @@ const works = [
 export default function OurWorks() {
   return (
     <section id="ourworks" className="bg-blue-900 py-16 our-works">
-      <div className="px-4 md:px-32 w-full">
+      <div className="px-4 md:px-10 lg:px-32 w-full">
         {/* Title */}
         <h2 className="text-white text-[30px] md:text-[48px] font-normal text-center mb-12">
           Our Works

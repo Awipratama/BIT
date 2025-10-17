@@ -3,11 +3,11 @@ import HandImage from "../assets/image13.png";
 
 export default function TextWithImage() {
   return (
-    <section className="text-img bg-linear-to-t from-[#ffffff] to-[#99B9EB] px-4 py-10 md:px-32 md:py-32 relative overflow-hidden">
-      <div className="flex flex-col md:flex-row justify-center items-center gap-18">
+    <section className="text-img bg-linear-to-t from-[#ffffff] to-[#99B9EB] px-4 py-10 md:px-10 lg:px-32 md:py-14 lg:py-32 relative overflow-hidden">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-18 md:gap-0 lg:gap-18">
         {/* <!-- Text --> */}
         <div className="hero-text w-full">
-          <h2 className="text-[#012D70] text-[28px] md:text-[48px] text-center md:text-left pb-4 md:pb-8">
+          <h2 className="text-[#012D70] text-[28px] md:text-[48px] lg:text-[48px] text-center md:text-left pb-4 md:pb-8">
             Driven by Innovation,
             <span className="text-[#F05A29]"> Trusted for Excellence</span>
           </h2>
