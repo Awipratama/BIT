@@ -119,6 +119,10 @@
   font-family: "Inter", sans-serif;
 }
 
+.font-tomorrow {
+  font-family: "Tomorrow", sans-serif;
+}
+
 .link-navbar {
   position: relative;
 }
@@ -165,14 +169,16 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 820px) {
   .hand-image {
     display: flex;
     justify-content: center;
-    clip-path: polygon(0% 0, 96% 0, 68% 100%, 0 100%);
+    clip-path: polygon(0% 0, 100% 0, 83% 100%, 0% 100%);
   }
 
   .text-img::before {
-    clip-path: polygon(60% 0, 97% 0, 41% 100%, 0 100%);
+    right: 0px;
+    width: 35%;
+    clip-path: polygon(60% 0, 100% 0, 50% 100%, 10% 100%);
   }
 }

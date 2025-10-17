@@ -37,11 +37,11 @@ function Navigation() {
     >
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <div className="flex gap-4 items-end py-2">
+        <div className="flex gap-2 lg:gap-4 items-end py-2">
           <a href="/">
             <img src={Logo} alt="main-logo" className="h-8 md:h-16 w-auto" />
           </a>
-          <h2 className="text-white font-semibold text-lg hidden md:block">
+          <h2 className="text-white font-semibold text-sm lg:text-lg">
             PT BIKIN INOVASI TEKNOLOGI
           </h2>
         </div>
@@ -50,17 +50,26 @@ function Navigation() {
         <div className="hidden md:flex items-center pt-0 md:pt-10 lg:pt-0">
           <ul className="flex gap-10 md:gap-6 lg:gap-10 text-white text-[20px] font-bold">
             <li className="link-navbar">
-              <a href="/#solution" className="active scroll-smooth hover:text-orange-500 transition">
+              <a
+                href="/#solution"
+                className="active scroll-smooth hover:text-orange-500 transition"
+              >
                 About
               </a>
             </li>
             <li className="link-navbar">
-              <a href="/#ourworks" className="hover:text-orange-500 transition scroll-smooth">
+              <a
+                href="/#ourworks"
+                className="hover:text-orange-500 transition scroll-smooth"
+              >
                 Our Works
               </a>
             </li>
             <li className="link-navbar">
-              <a href="/contact" className="hover:text-orange-500 transition scroll-smooth">
+              <a
+                href="/contact"
+                className="hover:text-orange-500 transition scroll-smooth"
+              >
                 Contact
               </a>
             </li>
@@ -80,7 +89,7 @@ function Navigation() {
 
       {/* Offcanvas Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-80 bg-[#012D70] shadow-lg transform ${
+        className={`fixed top-0 right-0 h-full w-84 bg-[#012D70] shadow-lg transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out md:hidden`}
       >
@@ -95,11 +104,11 @@ function Navigation() {
         </div>
 
         {/* Menu List */}
-        <ul className="flex flex-col gap-6 text-white font-bold p-10 text-[24px]">
+        <ul className="flex flex-col gap-6 text-white font-semibold p-10 text-[24px]">
           <li>
             <a
               href="/#solution"
-              className="hover:text-gray-300 transition"
+              className="hover:text-gray-300 transition font-tomorrow"
               onClick={() => setIsOpen(false)}
             >
               About
@@ -108,7 +117,7 @@ function Navigation() {
           <li>
             <a
               href="/#ourworks"
-              className="hover:text-gray-300 transition"
+              className="hover:text-gray-300 transition font-tomorrow"
               onClick={() => setIsOpen(false)}
             >
               Our Works
@@ -117,13 +126,16 @@ function Navigation() {
           <li>
             <a
               href="/contact"
-              className="hover:text-gray-300 transition"
+              className="hover:text-gray-300 transition font-tomorrow"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </a>
           </li>
         </ul>
+        <p className="mt-6 text-[16px] pl-10 md:text-[20px] md:flex lg:hidden md:justify-center md:pt-10 text-gray-400">
+          Copyright ©2025. All right reserved.
+        </p>
       </div>
     </nav>
   );
