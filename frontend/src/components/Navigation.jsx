@@ -31,7 +31,7 @@ function Navigation() {
 
   return (
     <nav
-      className={`navbar fixed top-0 left-0 w-full pt-6 pb-4 px-4 md:px-32 z-50 transition-all duration-300 ${
+      className={`navbar fixed top-0 left-0 w-full pt-6 pb-4 px-4 md:px-10 lg:px-34 z-50 transition-all duration-300 ${
         scrolled ? "bg-[#00000000]" : "bg-[#012D70] shadow-md"
       }`}
     >
@@ -47,8 +47,8 @@ function Navigation() {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center">
-          <ul className="flex gap-10 text-white text-[20px] font-bold">
+        <div className="hidden md:flex items-center pt-0 md:pt-10 lg:pt-0">
+          <ul className="flex gap-10 md:gap-6 lg:gap-10 text-white text-[20px] font-bold">
             <li className="link-navbar">
               <a href="/#solution" className="active scroll-smooth hover:text-orange-500 transition">
                 About
@@ -60,7 +60,7 @@ function Navigation() {
               </a>
             </li>
             <li className="link-navbar">
-              <a href="/#contact" className="hover:text-orange-500 transition scroll-smooth">
+              <a href="/contact" className="hover:text-orange-500 transition scroll-smooth">
                 Contact
               </a>
             </li>
@@ -116,7 +116,7 @@ function Navigation() {
           </li>
           <li>
             <a
-              href="/#contact"
+              href="/contact"
               className="hover:text-gray-300 transition"
               onClick={() => setIsOpen(false)}
             >

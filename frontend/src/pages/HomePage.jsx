@@ -19,7 +19,6 @@ function HomePage() {
       <TextWithImage />
       <OurWorks />
       <CTA />
-      <Contact />
       <Footer />
     </>
   );

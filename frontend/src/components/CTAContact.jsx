@@ -2,9 +2,9 @@ import React from "react";
 
 export default function CTAContact() {
 
-  // const handleButton = () => {
-  //   window.location.href = "/contact";
-  // }
+  const handleButton = () => {
+    window.location.href = "/contact";
+  }
 
   return (
     <section className="CTA relative pt-20 pb-30 px-4 md:px-0 flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-800 overflow-hidden">
@@ -42,9 +42,9 @@ export default function CTAContact() {
           get a free consultation on how we can help your business and team
           grow.
         </p>
-        {/* <button onClick={handleButton} className="cursor-pointer uppercase mt-8 px-4 py-2 text-[20px] border border-white bg-white text-[#012D70] rounded-full hover:bg-gray-700 hover:text-white transition">
+        <button onClick={handleButton} className="cursor-pointer uppercase mt-8 px-4 py-2 text-[20px] border border-white bg-white text-[#012D70] rounded-full hover:bg-gray-700 hover:text-white transition">
           Contact Us
-        </button> */}
+        </button>
       </div>
     </section>
   );
