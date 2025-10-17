@@ -11,7 +11,7 @@ class ContactController {
       const { error, value } = contactSchema.validate(data);
 
       const emailBody = `
-You received a new contact message from your website:
+You received a new contact message from your website (Bikin.id):
 
 Name: ${value.name}
 Email: ${value.email}
@@ -27,9 +27,9 @@ ${value.message}
           .send(baseMessage(false, error.details[0].message));
 
       await mailer.sendMail({
-        from: value.email,
+        from: "no-reply@bikin.id",
         to: "adisthana.wijaya@gmail.com",
-        subject: value.subject,
+        subject: "Contact from Bikin.id Website: " + value.subject,
         text: emailBody,
       });
 
