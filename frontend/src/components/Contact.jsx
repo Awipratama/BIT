@@ -64,7 +64,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 pb-0 md:pb-10 lg:px-12 pt-40 h-full">
         {/* Judul */}
         <div className="mb-8 pl-2">
-          <h2 className="text-4xl font-bold text-[#012D70]">CONTACT US</h2>
+          <h2 className="font-tomorrow text-4xl font-bold text-[#012D70]">CONTACT US</h2>
         </div>
 
         {/* Grid utama */}
@@ -143,7 +143,7 @@ export default function Contact() {
             <div className="submit-btn w-full flex justify-end">
               <button
                 type="submit"
-                className="bg-[#012D70] w-[100%] hover:bg-blue-900 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
+                className="font-inter bg-[#012D70] w-[100%] hover:bg-blue-900 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
               >
                 Send Message
               </button>

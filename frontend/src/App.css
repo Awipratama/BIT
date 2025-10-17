@@ -123,6 +123,10 @@
   font-family: "Tomorrow", sans-serif;
 }
 
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
 .link-navbar {
   position: relative;
 }
@@ -161,7 +165,7 @@
     right: 0;
     margin-right: -3rem;
     margin-top: 20rem;
-    clip-path: polygon(90% 0%, 106% 0, 53% 100%, 30% 100%);
+    clip-path: polygon(90% 0%, 106% 0, 53% 100%, 32% 100%);
   }
 
   .hand-image {
@@ -169,7 +173,7 @@
   }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .hand-image {
     display: flex;
     justify-content: center;
