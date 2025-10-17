@@ -61,16 +61,16 @@ export default function Contact() {
 
   return (
     <section className="bg-gradient-to-b from-blue-100 to-white py-10">
-      <div className="max-w-7xl mx-auto px-6 pb-0 md:pb-10 lg:px-12 pt-10 h-full">
+      <div className="max-w-7xl mx-auto px-6 pb-0 md:pb-10 lg:px-12 pt-40 h-full">
         {/* Judul */}
-        <div className="mb-8 text-center">
+        <div className="mb-8 pl-2">
           <h2 className="text-4xl font-bold text-[#012D70]">CONTACT US</h2>
         </div>
 
         {/* Grid utama */}
-        <div className="flex w-full justify-center items-start">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-20 justify-center items-start">
           {/* Form */}
-          <form onSubmit={handleSubmit} className="flex w-200 flex-col gap-6">
+          <form onSubmit={handleSubmit} className="flex w-full flex-col gap-6">
             <div>
               <input
                 type="text"
@@ -143,7 +143,7 @@ export default function Contact() {
             <div className="submit-btn w-full flex justify-end">
               <button
                 type="submit"
-                className="bg-[#012D70] w-[40%] hover:bg-blue-900 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
+                className="bg-[#012D70] w-[100%] hover:bg-blue-900 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
               >
                 Send Message
               </button>
@@ -151,7 +151,7 @@ export default function Contact() {
           </form>
 
           {/* Google Maps */}
-          {/* <div className="overflow-hidden shadow-lg h-[400px] lg:h-full rounded-lg">
+          <div className="overflow-hidden shadow-lg h-[400px] lg:h-full rounded-lg">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.573678109198!2d115.23915827579442!3d-8.636860687816958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23f86437e84bf%3A0x6b4afb425fb61158!2sAW%20Bali%20Web!5e0!3m2!1sid!2sid!4v1756349176493!5m2!1sid!2sid"
               width="100%"
@@ -162,7 +162,7 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
               title="Google Maps"
             ></iframe>
-          </div> */}
+          </div>
         </div>
       </div>
     </section>
