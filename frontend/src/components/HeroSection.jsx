@@ -79,11 +79,11 @@ function HeroSection() {
       <div className="relative z-10 flex flex-col md:flex-row h-screen items-center md:items-end pt-80 md:pt-0">
         {/* Kiri */}
         <div className="w-full md:w-2/3 flex flex-col justify-center md:justify-end px-4 md:px-10 lg:px-32 pb-4 md:pb-20 text-white text-center md:text-left">
-          <h1 className="left-heading text-[28px] md:text-[40px] lg:text-[56px] leading-tight z-50">
+          <h2 className="left-heading text-[28px] md:text-[40px] lg:text-[56px] leading-tight z-50">
             We are a{" "}
             <span className="text-orange-500">technology company </span>that
             offers a wide range of solutions <br /> for your digital needs
-          </h1>
+          </h2>
         </div>
 
         {/* Kanan */}

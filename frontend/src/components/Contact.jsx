@@ -64,7 +64,9 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 pb-0 md:pb-10 lg:px-12 pt-40 h-full">
         {/* Judul */}
         <div className="mb-8 pl-2">
-          <h2 className="font-tomorrow text-4xl font-bold text-[#012D70]">CONTACT US</h2>
+          <h1 className="font-tomorrow text-4xl font-bold text-[#012D70]">
+            CONTACT US
+          </h1>
         </div>
 
         {/* Grid utama */}
