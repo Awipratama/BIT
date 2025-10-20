@@ -29,6 +29,8 @@ function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location.pathname]);
 
+  const isContactPage = location.pathname === "/contact";
+
   return (
     <nav
       className={`navbar fixed top-0 left-0 w-full pt-6 pb-4 px-4 md:px-10 lg:px-34 z-50 transition-all duration-300 ${
@@ -41,9 +43,16 @@ function Navigation() {
           <a href="/">
             <img src={Logo} alt="main-logo" className="h-8 md:h-16 w-auto" />
           </a>
-          <h2 className="text-white font-semibold text-sm lg:text-lg">
-            PT BIKIN INOVASI TEKNOLOGI
-          </h2>
+
+          {isContactPage ? (
+            <h2 className="text-white font-semibold text-sm lg:text-lg">
+              PT BIKIN INOVASI TEKNOLOGI
+            </h2>
+          ) : (
+            <h1 className="text-white font-semibold text-sm lg:text-lg">
+              PT BIKIN INOVASI TEKNOLOGI
+            </h1>
+          )}
         </div>
 
         {/* Desktop Nav */}
@@ -133,7 +142,7 @@ function Navigation() {
             </a>
           </li>
         </ul>
-        <p className="mt-6 text-[16px] pl-10 md:text-[20px] md:flex lg:hidden md:justify-center md:pt-10 text-gray-400">
+        <p className="mt-6 text-[16px] pl-10 md:text-[20px] md:flex lg:hidden md:justify-center pt-140 md:pt-10 text-gray-400">
           Copyright ©2025. All right reserved.
         </p>
       </div>
