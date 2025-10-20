@@ -12,7 +12,7 @@ import {
 export default function Footer() {
   return (
     <footer className="footer bg-[#02173B] text-white py-20 px-6 md:px-32">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 justify-items-start md:justify-items-center">
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-12 justify-items-start md:justify-items-center">
         {/* Left Section */}
         <div className="order-3 md:order-1">
           <div className="flex items-center gap-2">

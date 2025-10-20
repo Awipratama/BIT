@@ -67,7 +67,7 @@
   content: "";
   position: absolute;
   top: 0;
-  right: 85px;
+  right: 81px;
   bottom: 0;
   width: 31%;
   background: #0c3c8c;
@@ -77,6 +77,11 @@
 
 .hand-image {
   clip-path: polygon(0% 0, 100% 0, 70% 100%, 0 100%);
+}
+
+.hand-image img {
+  width: 100%;
+  height: auto;
 }
 
 .text-img h1 {
