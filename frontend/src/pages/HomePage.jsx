@@ -23,6 +23,17 @@ function HomePage() {
           name="description"
           content="PT BIKIN INOVASI TEKNOLOGI - A global digital holding company delivering reliable IT solutions that connect ideas, technology, and people for a smarter, more connected future."
         />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="PT BIKIN INOVASI TEKNOLOGI | Empowering Digital Growth | IT & Web
+          Solutions | Bikin.id" />
+        <meta
+          property="og:description"
+          content="PT BIKIN INOVASI TEKNOLOGI - A global digital holding company delivering reliable IT solutions that connect ideas, technology, and people for a smarter, more connected future."
+        />
+        <meta property="og:image" content="https://bikin.id/featured-image.jpg" />
+        <meta property="og:url" content="https://bikin.id/" />
       </Helmet>
       <Navigation />
       <Hero />

@@ -14,6 +14,16 @@ export default function ContactPage() {
           name="description"
           content="Contact us for more information, support, or inquiries. Our team is ready to assist you | PT BIKIN INOVASI TEKNOLOGI"
         />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contact Us | PT BIKIN INOVASI TEKNOLOGI | Bikin.id" />
+        <meta
+          property="og:description"
+          content="Contact us for more information, support, or inquiries. Our team is ready to assist you | PT BIKIN INOVASI TEKNOLOGI"
+        />
+        <meta property="og:image" content="https://bikin.id/featured-image.jpg" />
+        <meta property="og:url" content="https://bikin.id/contact" />
       </Helmet>
       <Navigation />
       <Contact />
