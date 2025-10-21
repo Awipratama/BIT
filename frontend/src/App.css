@@ -2,26 +2,8 @@
   scroll-behavior: smooth !important;
 }
 
-.header-nav {
-  font-family: "Tomorrow", sans-serif;
-}
-
-.navigation {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-}
-
 .active {
   color: #f05a29 !important;
-}
-
-.left-heading {
-  font-family: "Tomorrow", sans-serif;
-  font-display: swap;
-}
-
-.right-heading {
-  font-family: "Inter", sans-serif;
 }
 
 .animate-gradient-up {
@@ -48,18 +30,6 @@
   100% {
     background-position: 50% 100%;
   }
-}
-
-.solution-heading {
-  font-family: "Tomorrow", sans-serif;
-}
-
-.card {
-  font-family: "Tomorrow", sans-serif;
-}
-
-.btn-text {
-  font-family: "Inter", sans-serif;
 }
 
 .text-img::before {

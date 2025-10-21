@@ -3,7 +3,7 @@ import React from "react";
 export default function SolutionSection() {
   return (
     <section id="solution" className="flex flex-col px-4 md:px-10 lg:px-32 py-20">
-      <h2 className="solution-heading text-center text-[30px] md:text-[40px] lg:text-[48px] text-[#012D70] pb-10">
+      <h2 className="solution-heading text-center text-[30px] md:text-[40px] lg:text-[48px] text-[#012D70] pb-10 font-tomorrow">
         Transforming Ideas into Digital Impact
       </h2>
       <div className="grid md:flex md:flex-wrap lg:grid grid-rows-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">

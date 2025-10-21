@@ -1,5 +1,4 @@
 import React from "react";
-import HandImage from "../assets/image13.png";
 
 export default function TextWithImage() {
   return (
@@ -21,7 +20,7 @@ export default function TextWithImage() {
           </p>
         </div>
         <div className="hand-image w-full z-9">
-          <img src={HandImage} alt="HandImage" />
+          <img src="./images/image13.png" alt="HandImage" />
         </div>
       </div>
     </section>
