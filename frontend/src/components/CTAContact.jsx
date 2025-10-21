@@ -7,7 +7,7 @@ export default function CTAContact() {
   }
 
   return (
-    <section className="CTA relative pt-20 pb-30 px-4 md:px-10 lg:px-0 flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-800 overflow-hidden">
+    <section className="font-tomorrow relative pt-20 pb-30 px-4 md:px-10 lg:px-0 flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-800 overflow-hidden">
       {/* Background Kanan */}
       <div
         className="absolute inset-0 animate-gradient-up"
@@ -37,7 +37,7 @@ export default function CTAContact() {
           Shape the future of work revolution with{" "}
           <span className="text-orange-500">Bikin.id</span>
         </h2>
-        <p className="text-white text-[16px] md:text-[20px} w-full md:w-[85%] lg:w-[55%]">
+        <p className="text-white text-[16px] md:text-[20px} w-full md:w-[85%] lg:w-[55%] font-inter">
           Through #PowerYourGrowth solutions for businesses and professionals,
           get a free consultation on how we can help your business and team
           grow.

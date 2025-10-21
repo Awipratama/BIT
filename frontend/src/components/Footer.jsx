@@ -19,10 +19,10 @@ export default function Footer() {
             <img src={Logo} alt="Logo" className="w-30" />
           </div>
           <div className="flex flex-col justify-between gap-16">
-            <h3 className="mt-2 text-[20px] md:text-[24px] font-regular">
+            <h3 className="mt-2 text-[20px] md:text-[24px] font-regular font-tomorrow">
               PT BIKIN INOVASI TEKNOLOGI
             </h3>
-            <p className="mt-6 text-[16px] md:text-[20px] md:hidden lg:block text-gray-400">
+            <p className="mt-6 text-[16px] md:text-[20px] md:hidden lg:block text-gray-400 font-inter">
               Copyright ©2025. All right reserved.
             </p>
           </div>
@@ -30,7 +30,7 @@ export default function Footer() {
 
         {/* Middle Section */}
         <div className="flex flex-col justify-start order-1 md:order-2">
-          <h3 className="text-[#F05A29] text-[20px] md:text-[24px] font-regular mb-3">
+          <h3 className="text-[#F05A29] text-[20px] md:text-[24px] font-regular mb-3 font-tomorrow">
             BIKIN.ID
           </h3>
           <ul className="space-y-2 text-[16px] md:text-[20px]">
@@ -59,16 +59,16 @@ export default function Footer() {
 
         {/* Right Section */}
         <div className="flex flex-col justify-start order-2 md:order-3">
-          <h3 className="text-[#F05A29] text-[20px] md:text-[24px] font-regular mb-3">
+          <h3 className="text-[#F05A29] text-[20px] md:text-[24px] font-regular mb-3 font-tomorrow">
             OUR CONTACT
           </h3>
           <a href="https://maps.app.goo.gl/Rw8cMqUFq6tyWaT98" target="_blank">
-            <p className="text-[16px] md:text-[20px] hover:text-[#F05A29] pb-4 hover:underline">
+            <p className="text-[16px] md:text-[20px] hover:text-[#F05A29] pb-4 hover:underline font-inter">
               Jalan Sulatri 168x, Denpasar, Bali
             </p>
           </a>
           <a href="https://wa.me/087887990222" target="_blank">
-            <p className="text-[16px] md:text-[20px] hover:text-[#F05A29] mb-6 hover:underline">
+            <p className="text-[16px] md:text-[20px] hover:text-[#F05A29] mb-6 hover:underline font-inter">
               +62 878-8799-0222
             </p>
           </a>
@@ -97,7 +97,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="mt-6 text-[16px] md:text-[20px] hidden md:flex lg:hidden md:justify-center md:pt-10 text-gray-400">
+      <p className="mt-6 text-[16px] md:text-[20px] hidden md:flex lg:hidden md:justify-center md:pt-10 text-gray-400 font-inter">
         Copyright ©2025. All right reserved.
       </p>
     </footer>

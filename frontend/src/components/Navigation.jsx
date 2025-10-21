@@ -46,7 +46,7 @@ function Navigation() {
 
           {isContactPage ? (
             <h2 className="text-white font-semibold text-sm lg:text-lg">
-              PT BIKIN INOVASI TEKNOLOGI
+              <a href="/">PT BIKIN INOVASI TEKNOLOGI</a>
             </h2>
           ) : (
             <h1 className="text-white font-semibold text-sm lg:text-lg">
