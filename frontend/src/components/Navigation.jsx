@@ -33,7 +33,7 @@ function Navigation() {
 
   return (
     <nav
-      className={`navbar fixed top-0 left-0 w-full pt-6 pb-4 px-4 md:px-10 lg:px-34 z-50 transition-all duration-300 ${
+      className={`navbar fixed top-0 left-0 w-full pt-6 pb-4 px-4 md:px-10 lg:px-32 z-50 transition-all duration-300 ${
         scrolled ? "bg-[#00000000]" : "bg-[#012D70] shadow-md"
       }`}
     >
@@ -46,7 +46,7 @@ function Navigation() {
 
           {isContactPage ? (
             <h2 className="text-white font-semibold text-sm lg:text-lg">
-              PT BIKIN INOVASI TEKNOLOGI
+              <a href="/">PT BIKIN INOVASI TEKNOLOGI</a>
             </h2>
           ) : (
             <h1 className="text-white font-semibold text-sm lg:text-lg">

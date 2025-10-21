@@ -9,10 +9,10 @@ export default function SolutionSection() {
       <div className="grid md:flex md:flex-wrap lg:grid grid-rows-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <div className="card md:w-[47%] lg:w-full transition duration-300 ease-out bg-[#003C97] hover:bg-linear-to-t hover:from-[#8A3418] hover:to-[#F05A29] text-white px-8 md:px-6 py-16 text-left">
           <h2 className="text-stone-400 text-[64px] h-20 px-4">*</h2>
-          <h5 className="text-[24px] md:text-[40px] px-4 pb-2">
+          <h5 className="text-[24px] md:text-[40px] px-4 pb-2 font-tomorrow">
             Empowering Digital Growth
           </h5>
-          <p className="w-full md:w-full text-[16px] md:text-[20px] px-4">
+          <p className="w-full md:w-full text-[16px] md:text-[20px] px-4 font-inter">
             We help businesses and individuals thrive through smart digital
             solutions that connect ideas, technology, and opportunity.
           </p>
@@ -20,10 +20,10 @@ export default function SolutionSection() {
         </div>
         <div className="card md:w-[47%] lg:w-full transition duration-300 ease-out bg-[#003C97] hover:bg-linear-to-t hover:from-[#8A3418] hover:to-[#F05A29] text-white px-8 md:px-6 py-16 text-left">
           <h2 className="text-stone-400 text-[64px] h-20 px-4">*</h2>
-          <h5 className="text-[24px] md:text-[40px] px-4 pb-2">
+          <h5 className="text-[24px] md:text-[40px] px-4 pb-2 font-tomorrow">
             Innovate. Connect. Evolve.
           </h5>
-          <p className="w-full md:w-full text-[16px] md:text-[20px] px-4">
+          <p className="w-full md:w-full text-[16px] md:text-[20px] px-4 font-inter">
             From web development to career platforms, we build a connected
             digital ecosystem designed for progress and efficiency.
           </p>
@@ -31,10 +31,10 @@ export default function SolutionSection() {
         </div>
         <div className="card w-full transition duration-300 ease-out bg-[#003C97] hover:bg-linear-to-t hover:from-[#8A3418] hover:to-[#F05A29] text-white px-8 md:px-6 py-16 text-left">
           <h2 className="text-stone-400 text-[64px] h-20 px-4">*</h2>
-          <h5 className="text-[24px] md:text-[40px] px-4 pb-2">
+          <h5 className="text-[24px] md:text-[40px] px-4 pb-2 font-tomorrow">
             Technology with Purpose
           </h5>
-          <p className="w-full md:w-full text-[16px] md:text-[20px] px-4">
+          <p className="w-full md:w-full text-[16px] md:text-[20px] px-4 font-inter">
             We believe every innovation should have meaning — creating value,
             opportunity, and sustainable growth for everyone.
           </p>

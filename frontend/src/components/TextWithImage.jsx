@@ -7,11 +7,11 @@ export default function TextWithImage() {
       <div className="flex flex-col md:flex-row justify-center items-center gap-18 md:gap-0 lg:gap-18">
         {/* <!-- Text --> */}
         <div className="hero-text w-full">
-          <h2 className="text-[#012D70] text-[28px] md:text-[48px] lg:text-[48px] text-center md:text-left pb-4 md:pb-8">
+          <h2 className="text-[#012D70] text-[28px] md:text-[48px] lg:text-[48px] text-center md:text-left pb-4 md:pb-8 font-tomorrow">
             Driven by Innovation,
             <span className="text-[#F05A29]"> Trusted for Excellence</span>
           </h2>
-          <p className="text-[16px] md:text-[20px] text-center md:text-start text-[#898895]">
+          <p className="text-[16px] md:text-[20px] text-center md:text-start text-[#898895] font-inter">
             For years, we’ve been empowering brands and individuals through
             reliable technology and creative expertise. Our commitment goes
             beyond delivering digital products — we build long-term partnerships

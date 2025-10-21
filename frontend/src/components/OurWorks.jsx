@@ -33,7 +33,7 @@ export default function OurWorks() {
     <section id="ourworks" className="bg-blue-900 py-16 our-works">
       <div className="px-4 md:px-10 lg:px-32 w-full">
         {/* Title */}
-        <h2 className="text-white text-[30px] md:text-[48px] font-normal text-center mb-12">
+        <h2 className="text-white text-[30px] md:text-[48px] font-normal text-center mb-12 font-tomorrow">
           Our Works
         </h2>
 
@@ -54,7 +54,7 @@ export default function OurWorks() {
                     className="max-h-50 object-contain mb-0 md:mb-4"
                   />
                 </div>
-                <p className="text-white text-center font-regular text-sm md:text-xl pt-2 hover:underline cursor-pointer">{work.name}</p>
+                <p className="text-white text-center font-regular text-sm md:text-xl pt-2 hover:underline cursor-pointer font-tomorrow">{work.name}</p>
               </div>
             </a>
           ))}
