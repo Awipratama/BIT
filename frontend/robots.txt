@@ -1,0 +1,8 @@
+# robots.txt for https://bikin.id
+
+User-agent: *
+Disallow: /backend/
+Allow: /html/
+Allow: /
+
+Sitemap: https://bikin.id/html/sitemap.xml

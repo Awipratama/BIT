@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
+import NotFoundPage from "./pages/404.jsx";
 import "./App.css";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Homepage />} />
       <Route path="/contact" element={<ContactPage />} />
-      <Route path="*" element={<h1>404 Not Found</h1>} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }
