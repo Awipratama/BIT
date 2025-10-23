@@ -5,4 +5,4 @@ Disallow: /backend/
 Allow: /html/
 Allow: /
 
-Sitemap: https://bikin.id/html/sitemap.xml
+Sitemap: https://bikin.id/sitemap.xml
